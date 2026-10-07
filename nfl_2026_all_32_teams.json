@@ -1,0 +1,499 @@
+{
+  "conferences": [
+    {
+      "name": "AFC East",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Buffalo Bills",
+          "mascot": "Bills",
+          "primary": "#00338D",
+          "secondary": "#C60C30",
+          "tertiary": "#FFFFFF",
+          "prestige": 94.2,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "BUF",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png"
+        },
+        {
+          "name": "Miami Dolphins",
+          "mascot": "Dolphins",
+          "primary": "#008E97",
+          "secondary": "#FC4C02",
+          "tertiary": "#FFFFFF",
+          "prestige": 72.9,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "MIA",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png"
+        },
+        {
+          "name": "New England Patriots",
+          "mascot": "Patriots",
+          "primary": "#002244",
+          "secondary": "#C60C30",
+          "tertiary": "#FFFFFF",
+          "prestige": 83.5,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "NE",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png"
+        },
+        {
+          "name": "New York Jets",
+          "mascot": "Jets",
+          "primary": "#125740",
+          "secondary": "#000000",
+          "tertiary": "#FFFFFF",
+          "prestige": 77.7,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "NYJ",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "AFC North",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Baltimore Ravens",
+          "mascot": "Ravens",
+          "primary": "#241773",
+          "secondary": "#000000",
+          "tertiary": "#FFFFFF",
+          "prestige": 97.1,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "BAL",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png"
+        },
+        {
+          "name": "Cincinnati Bengals",
+          "mascot": "Bengals",
+          "primary": "#FB4F14",
+          "secondary": "#000000",
+          "tertiary": "#FFFFFF",
+          "prestige": 92.3,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "CIN",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png"
+        },
+        {
+          "name": "Cleveland Browns",
+          "mascot": "Browns",
+          "primary": "#311D00",
+          "secondary": "#FF3C00",
+          "tertiary": "#FFFFFF",
+          "prestige": 84.5,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "CLE",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png"
+        },
+        {
+          "name": "Pittsburgh Steelers",
+          "mascot": "Steelers",
+          "primary": "#FFB612",
+          "secondary": "#101820",
+          "tertiary": "#FFFFFF",
+          "prestige": 76.8,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "PIT",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "AFC South",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Houston Texans",
+          "mascot": "Texans",
+          "primary": "#03202F",
+          "secondary": "#A71930",
+          "tertiary": "#FFFFFF",
+          "prestige": 78.7,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "HOU",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png"
+        },
+        {
+          "name": "Indianapolis Colts",
+          "mascot": "Colts",
+          "primary": "#002C5F",
+          "secondary": "#A2AAAD",
+          "tertiary": "#FFFFFF",
+          "prestige": 79.7,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "IND",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png"
+        },
+        {
+          "name": "Jacksonville Jaguars",
+          "mascot": "Jaguars",
+          "primary": "#006778",
+          "secondary": "#101820",
+          "tertiary": "#FFFFFF",
+          "prestige": 95.2,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "JAX",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png"
+        },
+        {
+          "name": "Tennessee Titans",
+          "mascot": "Titans",
+          "primary": "#0C2340",
+          "secondary": "#4B92DB",
+          "tertiary": "#FFFFFF",
+          "prestige": 70.0,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "TEN",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "AFC West",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Denver Broncos",
+          "mascot": "Broncos",
+          "primary": "#FB4F14",
+          "secondary": "#002244",
+          "tertiary": "#FFFFFF",
+          "prestige": 96.1,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "DEN",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png"
+        },
+        {
+          "name": "Kansas City Chiefs",
+          "mascot": "Chiefs",
+          "primary": "#E31837",
+          "secondary": "#FFB81C",
+          "tertiary": "#FFFFFF",
+          "prestige": 99.0,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "KC",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png"
+        },
+        {
+          "name": "Las Vegas Raiders",
+          "mascot": "Raiders",
+          "primary": "#000000",
+          "secondary": "#A5ACAF",
+          "tertiary": "#FFFFFF",
+          "prestige": 89.4,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "LV",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png"
+        },
+        {
+          "name": "Los Angeles Chargers",
+          "mascot": "Chargers",
+          "primary": "#0080C6",
+          "secondary": "#FFC20E",
+          "tertiary": "#FFFFFF",
+          "prestige": 71.0,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "LAC",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "NFC East",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Dallas Cowboys",
+          "mascot": "Cowboys",
+          "primary": "#003594",
+          "secondary": "#869397",
+          "tertiary": "#FFFFFF",
+          "prestige": 93.2,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "DAL",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png"
+        },
+        {
+          "name": "New York Giants",
+          "mascot": "Giants",
+          "primary": "#0B2265",
+          "secondary": "#A71930",
+          "tertiary": "#FFFFFF",
+          "prestige": 82.6,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "NYG",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png"
+        },
+        {
+          "name": "Philadelphia Eagles",
+          "mascot": "Eagles",
+          "primary": "#004C54",
+          "secondary": "#A5ACAF",
+          "tertiary": "#FFFFFF",
+          "prestige": 80.6,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "PHI",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png"
+        },
+        {
+          "name": "Washington Commanders",
+          "mascot": "Commanders",
+          "primary": "#5A1414",
+          "secondary": "#FFB612",
+          "tertiary": "#FFFFFF",
+          "prestige": 73.9,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "WAS",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/was.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "NFC North",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Chicago Bears",
+          "mascot": "Bears",
+          "primary": "#0B162A",
+          "secondary": "#C83803",
+          "tertiary": "#FFFFFF",
+          "prestige": 91.3,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "CHI",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png"
+        },
+        {
+          "name": "Detroit Lions",
+          "mascot": "Lions",
+          "primary": "#0076B6",
+          "secondary": "#B0B7BC",
+          "tertiary": "#FFFFFF",
+          "prestige": 85.5,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "DET",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png"
+        },
+        {
+          "name": "Green Bay Packers",
+          "mascot": "Packers",
+          "primary": "#203731",
+          "secondary": "#FFB612",
+          "tertiary": "#FFFFFF",
+          "prestige": 74.8,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "GB",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png"
+        },
+        {
+          "name": "Minnesota Vikings",
+          "mascot": "Vikings",
+          "primary": "#4F2683",
+          "secondary": "#FFC62F",
+          "tertiary": "#FFFFFF",
+          "prestige": 90.3,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "MIN",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "NFC South",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Atlanta Falcons",
+          "mascot": "Falcons",
+          "primary": "#A71930",
+          "secondary": "#000000",
+          "tertiary": "#FFFFFF",
+          "prestige": 86.5,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "ATL",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png"
+        },
+        {
+          "name": "Carolina Panthers",
+          "mascot": "Panthers",
+          "primary": "#0085CA",
+          "secondary": "#101820",
+          "tertiary": "#FFFFFF",
+          "prestige": 87.4,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "CAR",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png"
+        },
+        {
+          "name": "New Orleans Saints",
+          "mascot": "Saints",
+          "primary": "#D3BC8D",
+          "secondary": "#101820",
+          "tertiary": "#FFFFFF",
+          "prestige": 81.6,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "NO",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png"
+        },
+        {
+          "name": "Tampa Bay Buccaneers",
+          "mascot": "Buccaneers",
+          "primary": "#D50A0A",
+          "secondary": "#34302B",
+          "tertiary": "#FFFFFF",
+          "prestige": 71.9,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "TB",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png"
+        }
+      ],
+      "protectedPairs": []
+    },
+    {
+      "name": "NFC West",
+      "requiredConferenceGames": 6,
+      "conferencePrestige": 90.0,
+      "tier": "Power",
+      "teams": [
+        {
+          "name": "Arizona Cardinals",
+          "mascot": "Cardinals",
+          "primary": "#97233F",
+          "secondary": "#000000",
+          "tertiary": "#FFFFFF",
+          "prestige": 75.8,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "ARI",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png"
+        },
+        {
+          "name": "Los Angeles Rams",
+          "mascot": "Rams",
+          "primary": "#003594",
+          "secondary": "#FFA300",
+          "tertiary": "#FFFFFF",
+          "prestige": 88.4,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "LAR",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png"
+        },
+        {
+          "name": "San Francisco 49ers",
+          "mascot": "49ers",
+          "primary": "#AA0000",
+          "secondary": "#B3995D",
+          "tertiary": "#FFFFFF",
+          "prestige": 100.0,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "SF",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png"
+        },
+        {
+          "name": "Seattle Seahawks",
+          "mascot": "Seahawks",
+          "primary": "#002244",
+          "secondary": "#69BE28",
+          "tertiary": "#FFFFFF",
+          "prestige": 98.1,
+          "offenseScheme": "pro",
+          "defenseScheme": "4-2-5",
+          "abbreviation": "SEA",
+          "region": "Midwest",
+          "logoURL": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png"
+        }
+      ],
+      "protectedPairs": []
+    }
+  ],
+  "independents": [],
+  "bowls": [],
+  "ny6Bowls": [],
+  "rivalries": [],
+  "protectedPairs": [],
+  "subdivisionTeams": [],
+  "awardCustomizations": []
+}
