@@ -4,306 +4,35 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - ".github/workflows/build-basketball.yml"
+      - '.github/workflows/build-basketball.yml'
+      - 'build_basketball.py'
+      - 'basketball_D1_source.json'
+      - 'college_basketball_all_1306_teams_REAL_LOGOS.json'
 
 permissions:
   contents: write
 
+concurrency:
+  group: build-basketball
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Build basketball league
-        shell: bash
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          import re
-
-          SOURCES = [
-              "college_basketball_all_1306_teams_REAL_LOGOS.json",
-              "college_basketball_all_1306_teams.json"
-          ]
-
-          source_file = None
-
-          for candidate in SOURCES:
-              if os.path.exists(candidate):
-                  source_file = candidate
-                  break
-
-          if source_file is None:
-              raise FileNotFoundError(
-                  "Could not find the 1306-team basketball source JSON."
-              )
-
-          print("Using source:", source_file)
-
-          with open(source_file, "r", encoding="utf-8") as f:
-              source = json.load(f)
-
-          POWER_WORDS = [
-              "Atlantic Coast",
-              "ACC",
-              "Big Ten",
-              "Big 12",
-              "Big East",
-              "Southeastern",
-              "SEC",
-              "Pac-12"
-          ]
-
-          def conference_tier(name):
-              if any(x.lower() in name.lower() for x in POWER_WORDS):
-                  return "Power", 88.0
-
-              return "Non-Power", 55.0
-
-
-          def region_for(name):
-              n = name.lower()
-
-              if any(x in n for x in [
-                  "new england", "northeast", "ivy", "big east",
-                  "patriot", "atlantic 10", "america east",
-                  "new jersey", "empire", "liberty"
-              ]):
-                  return "Northeast"
-
-              if any(x in n for x in [
-                  "pacific", "california", "west coast", "big west",
-                  "pac-12", "northwest", "big sky", "mountain"
-              ]):
-                  return "West"
-
-              if any(x in n for x in [
-                  "southland", "southwest", "western athletic",
-                  "lone star", "red river"
-              ]):
-                  return "Southwest"
-
-              if any(x in n for x in [
-                  "sec", "southeastern", "atlantic coast",
-                  "acc", "southern", "sun belt", "big south",
-                  "conference usa", "peach belt", "carolinas"
-              ]):
-                  return "Southeast"
-
-              if any(x in n for x in [
-                  "big 12", "missouri valley", "summit",
-                  "great plains", "kansas", "dakota"
-              ]):
-                  return "Plains"
-
-              return "Midwest"
-
-
-          def clean_color(value, fallback):
-              value = str(value or "").strip()
-
-              if re.fullmatch(r"#[0-9A-Fa-f]{6}", value):
-                  return value.upper()
-
-              return fallback
-
-
-          conferences = []
-
-          for conference in source.get("conferences", []):
-
-              conf_name = str(
-                  conference.get("name", "Conference")
-              ).strip()
-
-              tier, conf_prestige = conference_tier(conf_name)
-
-              teams = []
-
-              for team in conference.get("teams", []):
-
-                  name = str(
-                      team.get("name", "Unknown Team")
-                  ).strip()
-
-                  mascot = str(
-                      team.get("mascot", "Basketball")
-                  ).strip()
-
-                  try:
-                      prestige = float(
-                          team.get("prestige", 60)
-                      )
-                  except:
-                      prestige = 60.0
-
-                  prestige = max(
-                      25.0,
-                      min(100.0, prestige)
-                  )
-
-                  abbreviation = re.sub(
-                      r"[^A-Za-z0-9]",
-                      "",
-                      str(team.get("abbreviation", ""))
-                  ).upper()
-
-                  if not abbreviation:
-                      abbreviation = re.sub(
-                          r"[^A-Za-z0-9]",
-                          "",
-                          name
-                      ).upper()[:6]
-
-                  teams.append({
-                      "name": name,
-
-                      "mascot": mascot or "Basketball",
-
-                      "primary": clean_color(
-                          team.get("primary"),
-                          "#1F4E79"
-                      ),
-
-                      "secondary": clean_color(
-                          team.get("secondary"),
-                          "#FFFFFF"
-                      ),
-
-                      "tertiary": clean_color(
-                          team.get("tertiary"),
-                          "#000000"
-                      ),
-
-                      "prestige": round(prestige, 1),
-
-                      "offenseScheme": "spread",
-
-                      "defenseScheme": "4-2-5",
-
-                      "abbreviation": abbreviation[:8],
-
-                      "region": region_for(conf_name),
-
-                      "logoURL": str(
-                          team.get("logoURL", "")
-                      ).strip()
-                  })
-
-
-              if len(teams) >= 9:
-                  conference_games = 8
-              else:
-                  conference_games = max(
-                      0,
-                      len(teams) - 1
-                  )
-
-
-              conferences.append({
-                  "name": conf_name,
-
-                  "requiredConferenceGames":
-                      conference_games,
-
-                  "conferencePrestige":
-                      conf_prestige,
-
-                  "tier":
-                      tier,
-
-                  "teams":
-                      teams,
-
-                  "protectedPairs":
-                      []
-              })
-
-
-          league = {
-              "conferences": conferences,
-
-              "independents": [],
-
-              "rivalries": [],
-
-              "protectedPairs": [],
-
-              "tournamentLogoURL": "",
-
-              "subdivisionTeams": [],
-
-              "awardCustomizations": []
-          }
-
-
-          OUTPUT = "basketball_2026.json"
-
-          with open(
-              OUTPUT,
-              "w",
-              encoding="utf-8"
-          ) as f:
-
-              json.dump(
-                  league,
-                  f,
-                  ensure_ascii=False,
-                  separators=(",", ":")
-              )
-
-
-          with open(
-              OUTPUT,
-              "r",
-              encoding="utf-8"
-          ) as f:
-
-              test = json.load(f)
-
-
-          teams = [
-              team
-              for conf in test["conferences"]
-              for team in conf["teams"]
-          ]
-
-
-          print("")
-          print("BUILD COMPLETE")
-          print("----------------------")
-          print("Conferences:", len(test["conferences"]))
-          print("Teams:", len(teams))
-          print(
-              "Teams with logos:",
-              sum(
-                  bool(t.get("logoURL"))
-                  for t in teams
-              )
-          )
-          print("Output:", OUTPUT)
-
-          if not teams:
-              raise RuntimeError("No teams were generated.")
-
-          PY
-
-
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and validate basketball imports
+        run: python build_basketball.py
       - name: Commit basketball JSON
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add basketball_2026.json
-
-          if git diff --cached --quiet; then
-            echo "basketball_2026.json already up to date."
-          else
-            git commit -m "Build college basketball league"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add basketball_2026.json basketball_2026_D1.json basketball_D1_football_format.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Build validated basketball imports'
             git push
           fi
